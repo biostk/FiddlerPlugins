@@ -39,10 +39,22 @@ namespace FiddlerPlugins
             }
         }
 
+        /// <summary>
+        /// 会话列表增加触发事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiListBox1_ItemsAdd(object sender, EventArgs e)
         {
+            //todo 增加会话列表事件处理
         }
 
+
+        /// <summary>
+        /// 拖放过程中事件，赋值允许拖放
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiListBox1_DragEnter(object sender, DragEventArgs e)
         {
             // 检查拖放数据是否包含会话信息
@@ -52,6 +64,12 @@ namespace FiddlerPlugins
             }
         }
 
+
+        /// <summary>
+        /// 获取到拖放会话列表处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiListBox1_DragDrop(object sender, DragEventArgs e)
         {
             // 获取拖放的会话数据
@@ -60,6 +78,12 @@ namespace FiddlerPlugins
             ProcessSessions(sessions);
         }
 
+
+        /// <summary>
+        /// 双击删除指定会话列表
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiListBox1_DoubleClick(object sender, EventArgs e)
         {
             int index = uiListBox1.SelectedIndex;
@@ -68,18 +92,29 @@ namespace FiddlerPlugins
                 return;
             }
 
+            //会话列表同步删除
             uiListBox1.Items.RemoveAt(index);
             _sessionList.RemoveAt(index);
         }
-        //一键生成代码
+
+        /// <summary>
+        /// 一键生成代码
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiButton1_Click(object sender, EventArgs e)
         {
-
+            //todo 一键生成代码
         }
+
+
         //一键复制至剪辑板
         private void uiButton2_Click(object sender, EventArgs e)
         {
-
+            //todo 一键复制到剪辑板
         }
+
+
+
     }
 }
