@@ -48,7 +48,7 @@ namespace FiddlerPlugins
             uiGongNengTabPage.Dock = DockStyle.Fill;
 
             //创建页面容器
-            this.gongNengTabPage = new TabPage("Lazy Cat Series");
+            this.gongNengTabPage = new TabPage("Fiddler To ECode");
             this.gongNengTabPage.ToolTipText = "By:学无止境 QQ:97348461";
             this.gongNengTabPage.Controls.Add(uiGongNengTabPage);
             this.gongNengTabPage.ImageIndex =(int) Fiddler.SessionIcons.Builder ;
