@@ -1,11 +1,12 @@
 ﻿using System.Windows.Forms;
 using Fiddler;
+using Sunny.UI;
 
 namespace FiddlerPlugins
 {
     public class FiddlerInit : IAutoTamper
     {
-        private TabPage uiGongNengTabPage;
+        private TabPage gongNengTabPage ;
 
 
         void IAutoTamper.AutoTamperRequestAfter(Session oSession)
@@ -42,10 +43,20 @@ namespace FiddlerPlugins
         {
             //在插件加载时，你可以进行初始化工作，如注册事件处理程序或进行日志记录。
 
+            //初始化功能视图
+            UiGongNengTabPage uiGongNengTabPage = new UiGongNengTabPage();
+            uiGongNengTabPage.Dock = DockStyle.Fill;
+
             //创建页面容器
-            this.uiGongNengTabPage = new TabPage("Lazy Cat Series");
-            this.uiGongNengTabPage.Dock = DockStyle.Fill;
-            this.uiGongNengTabPage.ToolTipText = "By:学无止境 QQ:97348461";
+            this.gongNengTabPage = new TabPage("Lazy Cat Series");
+            this.gongNengTabPage.ToolTipText = "By:学无止境 QQ:97348461";
+            this.gongNengTabPage.Controls.Add(uiGongNengTabPage);
+            this.gongNengTabPage.ImageIndex =(int) Fiddler.SessionIcons.Builder ;
+            
+            //Fiddler显示插件页、设置
+            FiddlerApplication.UI.tabsViews.TabPages.Insert(0,this.gongNengTabPage);
+            FiddlerApplication.UI.tabsViews.ShowToolTips = true;
+
 
 
         }

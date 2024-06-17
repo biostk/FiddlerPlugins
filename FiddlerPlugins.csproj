@@ -56,16 +56,25 @@
   <ItemGroup>
     <Compile Include="FiddlerInit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PageView\UserControl1.cs">
+    <Compile Include="PageView\UiGongNengTabPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PageView\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="PageView\UiGongNengTabPage.Designer.cs">
+      <DependentUpon>UiGongNengTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PageView\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="PageView\UiGongNengTabPage.resx">
+      <DependentUpon>UiGongNengTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +82,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y $(TargetPath) C:\Users\Administrator\Documents\Fiddler2\Scripts\$(TargetName)$(TargetExt)</PostBuildEvent>
+    <PostBuildEvent>copy /Y $(TargetPath) %25userprofile%25\Documents\Fiddler2\Scripts\$(TargetName)$(TargetExt)</PostBuildEvent>
   </PropertyGroup>
 </Project>
