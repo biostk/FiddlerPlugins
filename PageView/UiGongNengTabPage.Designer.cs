@@ -31,10 +31,10 @@ namespace FiddlerPlugins
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -62,16 +62,6 @@ namespace FiddlerPlugins
             this.tabPage1.Text = "Fiddler To ECode";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(524, 636);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -87,27 +77,13 @@ namespace FiddlerPlugins
             this.tableLayoutPanel1.Size = new System.Drawing.Size(518, 630);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // uiPanel1
-            // 
-            this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiPanel1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel1.Location = new System.Drawing.Point(54, 30);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Radius = 1;
-            this.uiPanel1.Size = new System.Drawing.Size(270, 262);
-            this.uiPanel1.TabIndex = 4;
-            this.uiPanel1.Text = "uiPanel1";
-            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // uiTextBox1
             // 
             this.uiTextBox1.AllowDrop = true;
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTextBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.Location = new System.Drawing.Point(54, 30);
+            this.uiTextBox1.Location = new System.Drawing.Point(4, 194);
             this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox1.MaxLength = 131072;
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
@@ -116,11 +92,36 @@ namespace FiddlerPlugins
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
             this.uiTextBox1.Radius = 15;
             this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(518, 368);
+            this.uiTextBox1.Size = new System.Drawing.Size(510, 431);
             this.uiTextBox1.TabIndex = 5;
             this.uiTextBox1.Text = "uitextbox1";
             this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.uiTextBox1.Watermark = "";
+            this.uiTextBox1.TextChanged += new System.EventHandler(this.uiTextBox1_TextChanged_1);
+            // 
+            // uiPanel1
+            // 
+            this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiPanel1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel1.Location = new System.Drawing.Point(4, 5);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.Radius = 1;
+            this.uiPanel1.Size = new System.Drawing.Size(510, 179);
+            this.uiPanel1.TabIndex = 4;
+            this.uiPanel1.Text = "uiPanel1";
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(524, 636);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // UiGongNengTabPage
             // 

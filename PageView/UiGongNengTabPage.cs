@@ -53,5 +53,10 @@ namespace FiddlerPlugins
 
             }
         }
+
+        private void uiTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
