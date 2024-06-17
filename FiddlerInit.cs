@@ -6,7 +6,7 @@ namespace FiddlerPlugins
 {
     public class FiddlerInit : IAutoTamper
     {
-        private TabPage gongNengTabPage ;
+        private TabPage gongNengTabPage;
 
 
         void IAutoTamper.AutoTamperRequestAfter(Session oSession)
@@ -51,14 +51,11 @@ namespace FiddlerPlugins
             this.gongNengTabPage = new TabPage("Fiddler To ECode");
             this.gongNengTabPage.ToolTipText = "By:学无止境 QQ:97348461";
             this.gongNengTabPage.Controls.Add(uiGongNengTabPage);
-            this.gongNengTabPage.ImageIndex =(int) Fiddler.SessionIcons.Builder ;
-            
+            this.gongNengTabPage.ImageIndex = (int)Fiddler.SessionIcons.Builder;
+
             //Fiddler显示插件页、设置
-            FiddlerApplication.UI.tabsViews.TabPages.Insert(0,this.gongNengTabPage);
+            FiddlerApplication.UI.tabsViews.TabPages.Insert(0, this.gongNengTabPage);
             FiddlerApplication.UI.tabsViews.ShowToolTips = true;
-
-
-
         }
     }
 }
