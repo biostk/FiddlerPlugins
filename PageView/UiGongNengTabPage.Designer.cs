@@ -35,6 +35,7 @@ namespace FiddlerPlugins
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.uiPanel2 = new Sunny.UI.UIPanel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,22 +65,26 @@ namespace FiddlerPlugins
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.Controls.Add(this.uiTextBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.uiPanel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.uiPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(518, 630);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // uiTextBox1
             // 
             this.uiTextBox1.AllowDrop = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.uiTextBox1, 2);
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTextBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -91,12 +96,14 @@ namespace FiddlerPlugins
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
             this.uiTextBox1.Radius = 15;
+            this.uiTextBox1.ShowScrollBar = true;
             this.uiTextBox1.ShowText = false;
             this.uiTextBox1.Size = new System.Drawing.Size(510, 431);
             this.uiTextBox1.TabIndex = 5;
-            this.uiTextBox1.Text = "uitextbox1";
             this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.uiTextBox1.Watermark = "";
+            this.uiTextBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.uiTextBox1_DragDrop);
+            this.uiTextBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.uiTextBox1_DragEnter);
             // 
             // uiPanel1
             // 
@@ -107,9 +114,8 @@ namespace FiddlerPlugins
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.Radius = 1;
-            this.uiPanel1.Size = new System.Drawing.Size(510, 179);
+            this.uiPanel1.Size = new System.Drawing.Size(354, 179);
             this.uiPanel1.TabIndex = 4;
-            this.uiPanel1.Text = "uiPanel1";
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage2
@@ -121,6 +127,18 @@ namespace FiddlerPlugins
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // uiPanel2
+            // 
+            this.uiPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiPanel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel2.Location = new System.Drawing.Point(366, 5);
+            this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel2.Name = "uiPanel2";
+            this.uiPanel2.Size = new System.Drawing.Size(148, 179);
+            this.uiPanel2.TabIndex = 6;
+            this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UiGongNengTabPage
             // 
@@ -145,5 +163,6 @@ namespace FiddlerPlugins
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UIPanel uiPanel1;
+        private Sunny.UI.UIPanel uiPanel2;
     }
 }
