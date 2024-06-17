@@ -197,7 +197,7 @@ namespace FiddlerPlugins
             this.uiRadioButton1.RadioButtonSize = 13;
             this.uiRadioButton1.Size = new System.Drawing.Size(80, 15);
             this.uiRadioButton1.TabIndex = 4;
-            this.uiRadioButton1.Text = "WinHttpW";
+            this.uiRadioButton1.Text = "Null";
             // 
             // uiRadioButton2WinHttpW
             // 
@@ -318,7 +318,7 @@ namespace FiddlerPlugins
             this.uiRadioButton2.RadioButtonSize = 13;
             this.uiRadioButton2.Size = new System.Drawing.Size(81, 15);
             this.uiRadioButton2.TabIndex = 7;
-            this.uiRadioButton2.Text = "WinHttpW";
+            this.uiRadioButton2.Text = "Null";
             // 
             // UiGongNengTabPage
             // 
