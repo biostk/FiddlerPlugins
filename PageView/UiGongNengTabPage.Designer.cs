@@ -97,7 +97,6 @@ namespace FiddlerPlugins
             this.uiTextBox1.Text = "uitextbox1";
             this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.uiTextBox1.Watermark = "";
-            this.uiTextBox1.TextChanged += new System.EventHandler(this.uiTextBox1_TextChanged_1);
             // 
             // uiPanel1
             // 

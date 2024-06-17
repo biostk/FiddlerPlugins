@@ -23,11 +23,6 @@ namespace FiddlerPlugins
 
         }
 
-        private void uiTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void uiTextBox1_DragDrop(object sender, DragEventArgs e)
         {
             // 获取拖放的会话数据
@@ -54,9 +49,5 @@ namespace FiddlerPlugins
             }
         }
 
-        private void uiTextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
