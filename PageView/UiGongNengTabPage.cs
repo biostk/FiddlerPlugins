@@ -519,7 +519,7 @@ namespace FiddlerPlugins
         private void uiRadioButton1WinHttpR_Click(object sender, EventArgs e)
         {
             uiRadioButton1WinHttpR.Checked = uiRadioButton1WinHttpR.Checked;
-            uiRadioButton2WinHttpW.Checked = uiRadioButton2WinHttpW.Checked;
+            this._module = uiRadioButton1WinHttpR.Checked;
         }
 
         /// <summary>
@@ -530,7 +530,7 @@ namespace FiddlerPlugins
         private void uiRadioButton2WinHttpW_Click(object sender, EventArgs e)
         {
             uiRadioButton1WinHttpR.Checked = uiRadioButton1WinHttpR.Checked;
-            uiRadioButton2WinHttpW.Checked = uiRadioButton2WinHttpW.Checked;
+            this._module = uiRadioButton1WinHttpR.Checked;
         }
 
         /// <summary>
