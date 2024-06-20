@@ -45,7 +45,6 @@ namespace FiddlerPlugins
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiButton3CodeDebuger = new Sunny.UI.UIButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.uiLabel2 = new Sunny.UI.UILabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -142,7 +141,6 @@ namespace FiddlerPlugins
             this.tableLayoutPanel3.Controls.Add(this.uiLabel1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.uiRadioButton1WinHttpR, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.uiRadioButton2WinHttpW, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.uiLabel2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -306,21 +304,6 @@ namespace FiddlerPlugins
             this.tabPage2.Text = "ToClassCode";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // uiLabel2
-            // 
-            this.uiLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiLabel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel2.Location = new System.Drawing.Point(0, 20);
-            this.uiLabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(86, 20);
-            this.uiLabel2.TabIndex = 8;
-            this.uiLabel2.Text = "PostData:";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // UiGongNengTabPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -358,6 +341,5 @@ namespace FiddlerPlugins
         private Sunny.UI.UIRadioButton uiRadioButton1WinHttpR;
         private Sunny.UI.UIRadioButton uiRadioButton2WinHttpW;
         private Sunny.UI.UIButton uiButton3CodeDebuger;
-        private Sunny.UI.UILabel uiLabel2;
     }
 }
