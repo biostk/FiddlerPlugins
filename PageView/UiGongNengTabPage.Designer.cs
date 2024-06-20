@@ -37,15 +37,15 @@ namespace FiddlerPlugins
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiRadioButton1WinHttpR = new Sunny.UI.UIRadioButton();
-            this.uiRadioButton1 = new Sunny.UI.UIRadioButton();
             this.uiRadioButton2WinHttpW = new Sunny.UI.UIRadioButton();
             this.uiListBox1 = new Sunny.UI.UIListBox();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiButton1 = new Sunny.UI.UIButton();
+            this.uiButton3CodeDebuger = new Sunny.UI.UIButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.uiRadioButton2 = new Sunny.UI.UIRadioButton();
+            this.uiLabel2 = new Sunny.UI.UILabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -141,15 +141,15 @@ namespace FiddlerPlugins
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.Controls.Add(this.uiLabel1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.uiRadioButton1WinHttpR, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.uiRadioButton1, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.uiRadioButton2WinHttpW, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.uiRadioButton2, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.uiLabel2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.28736F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.71265F));
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(431, 87);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
@@ -163,9 +163,9 @@ namespace FiddlerPlugins
             this.uiLabel1.Location = new System.Drawing.Point(0, 0);
             this.uiLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(86, 21);
+            this.uiLabel1.Size = new System.Drawing.Size(86, 20);
             this.uiLabel1.TabIndex = 4;
-            this.uiLabel1.Text = "Module：";
+            this.uiLabel1.Text = " Module：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // uiRadioButton1WinHttpR
@@ -179,25 +179,10 @@ namespace FiddlerPlugins
             this.uiRadioButton1WinHttpR.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButton1WinHttpR.Name = "uiRadioButton1WinHttpR";
             this.uiRadioButton1WinHttpR.RadioButtonSize = 13;
-            this.uiRadioButton1WinHttpR.Size = new System.Drawing.Size(80, 15);
+            this.uiRadioButton1WinHttpR.Size = new System.Drawing.Size(80, 14);
             this.uiRadioButton1WinHttpR.TabIndex = 5;
             this.uiRadioButton1WinHttpR.Text = "WinHttpR";
-            // 
-            // uiRadioButton1
-            // 
-            this.uiRadioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiRadioButton1.Enabled = false;
-            this.uiRadioButton1.Font = new System.Drawing.Font("宋体", 10F);
-            this.uiRadioButton1.Location = new System.Drawing.Point(261, 3);
-            this.uiRadioButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRadioButton1.Name = "uiRadioButton1";
-            this.uiRadioButton1.RadioButtonSize = 13;
-            this.uiRadioButton1.Size = new System.Drawing.Size(80, 15);
-            this.uiRadioButton1.TabIndex = 4;
-            this.uiRadioButton1.Text = "Null";
+            this.uiRadioButton1WinHttpR.Click += new System.EventHandler(this.uiRadioButton1WinHttpR_Click);
             // 
             // uiRadioButton2WinHttpW
             // 
@@ -210,9 +195,10 @@ namespace FiddlerPlugins
             this.uiRadioButton2WinHttpW.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButton2WinHttpW.Name = "uiRadioButton2WinHttpW";
             this.uiRadioButton2WinHttpW.RadioButtonSize = 13;
-            this.uiRadioButton2WinHttpW.Size = new System.Drawing.Size(80, 15);
+            this.uiRadioButton2WinHttpW.Size = new System.Drawing.Size(80, 14);
             this.uiRadioButton2WinHttpW.TabIndex = 6;
             this.uiRadioButton2WinHttpW.Text = "WinHttpW";
+            this.uiRadioButton2WinHttpW.Click += new System.EventHandler(this.uiRadioButton2WinHttpW_Click);
             // 
             // uiListBox1
             // 
@@ -259,12 +245,15 @@ namespace FiddlerPlugins
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.uiButton2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.uiButton1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.uiButton3CodeDebuger, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 90);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.23684F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.76316F));
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.77778F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(139, 152);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -272,7 +261,7 @@ namespace FiddlerPlugins
             // 
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton2.Font = new System.Drawing.Font("宋体", 9F);
-            this.uiButton2.Location = new System.Drawing.Point(72, 127);
+            this.uiButton2.Location = new System.Drawing.Point(72, 101);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton2.Name = "uiButton2";
             this.uiButton2.Size = new System.Drawing.Size(62, 22);
@@ -285,7 +274,7 @@ namespace FiddlerPlugins
             // 
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton1.Font = new System.Drawing.Font("宋体", 9F);
-            this.uiButton1.Location = new System.Drawing.Point(3, 127);
+            this.uiButton1.Location = new System.Drawing.Point(3, 101);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Size = new System.Drawing.Size(62, 22);
@@ -293,6 +282,19 @@ namespace FiddlerPlugins
             this.uiButton1.Text = "Generate";
             this.uiButton1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
+            // uiButton3CodeDebuger
+            // 
+            this.uiButton3CodeDebuger.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton3CodeDebuger.Font = new System.Drawing.Font("宋体", 9F);
+            this.uiButton3CodeDebuger.Location = new System.Drawing.Point(72, 129);
+            this.uiButton3CodeDebuger.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton3CodeDebuger.Name = "uiButton3CodeDebuger";
+            this.uiButton3CodeDebuger.Size = new System.Drawing.Size(62, 20);
+            this.uiButton3CodeDebuger.TabIndex = 4;
+            this.uiButton3CodeDebuger.Text = "代码调试";
+            this.uiButton3CodeDebuger.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3CodeDebuger.Click += new System.EventHandler(this.uiButton3CodeDebuger_Click);
             // 
             // tabPage2
             // 
@@ -304,21 +306,20 @@ namespace FiddlerPlugins
             this.tabPage2.Text = "ToClassCode";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // uiRadioButton2
+            // uiLabel2
             // 
-            this.uiRadioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.uiLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiRadioButton2.Enabled = false;
-            this.uiRadioButton2.Font = new System.Drawing.Font("宋体", 10F);
-            this.uiRadioButton2.Location = new System.Drawing.Point(347, 3);
-            this.uiRadioButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRadioButton2.Name = "uiRadioButton2";
-            this.uiRadioButton2.RadioButtonSize = 13;
-            this.uiRadioButton2.Size = new System.Drawing.Size(81, 15);
-            this.uiRadioButton2.TabIndex = 7;
-            this.uiRadioButton2.Text = "Null";
+            this.uiLabel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel2.Location = new System.Drawing.Point(0, 20);
+            this.uiLabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(86, 20);
+            this.uiLabel2.TabIndex = 8;
+            this.uiLabel2.Text = "PostData:";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UiGongNengTabPage
             // 
@@ -348,7 +349,6 @@ namespace FiddlerPlugins
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UIPanel uiPanel2;
-        private Sunny.UI.UIRadioButton uiRadioButton1;
         private Sunny.UI.UIListBox uiListBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Sunny.UI.UIButton uiButton2;
@@ -357,6 +357,7 @@ namespace FiddlerPlugins
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIRadioButton uiRadioButton1WinHttpR;
         private Sunny.UI.UIRadioButton uiRadioButton2WinHttpW;
-        private Sunny.UI.UIRadioButton uiRadioButton2;
+        private Sunny.UI.UIButton uiButton3CodeDebuger;
+        private Sunny.UI.UILabel uiLabel2;
     }
 }
