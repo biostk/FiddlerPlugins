@@ -228,6 +228,7 @@ namespace FiddlerPlugins
                 stringBuilder.AppendFormat("url = \"{0}{1}?{2}\"\r\n", isHttps ? "https://" : "http://", queryUrl,
                     queryData);
             }
+
             stringBuilder.AppendLine("http.Open (method, url)");
             return stringBuilder;
         }
