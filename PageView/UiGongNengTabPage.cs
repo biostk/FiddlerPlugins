@@ -117,6 +117,10 @@ namespace FiddlerPlugins
             Task.Run(async () => { uiTextBox1.Text = await AutoGenerateCode(); });
         }
 
+        /// <summary>
+        /// 自动生成代码实现过程
+        /// </summary>
+        /// <returns></returns>
         private async Task<string> AutoGenerateCode()
         {
             string code = String.Empty;
@@ -324,6 +328,8 @@ namespace FiddlerPlugins
         private void uiButton2_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(uiTextBox1.Text);
+            this.uiListBox1.Items.Clear();
+            this._sessionList.Clear();
         }
 
         /// <summary>
@@ -415,15 +421,15 @@ namespace FiddlerPlugins
                     break;
                 case JTokenType.Integer:
                     this._stringBuilderLs.AppendLine($".参数 {keyName}, 整数型, 可空, {token}");
-                    this._stringBuilderLs.AppendLine($"Json.置文本 (“{path}”, {keyName})");
+                    this._stringBuilderLs.AppendLine($"Json.置整数 (“{path}”, {keyName})");
                     break;
                 case JTokenType.Float:
                     this._stringBuilderLs.AppendLine($".参数 {keyName}, 小数型, 可空, {token}");
-                    this._stringBuilderLs.AppendLine($"Json.置文本 (“{path}”, {keyName})");
+                    this._stringBuilderLs.AppendLine($"Json.置双精度 (“{path}”, {keyName})");
                     break;
                 case JTokenType.Boolean:
                     this._stringBuilderLs.AppendLine($".参数 {keyName}, 逻辑型, 可空, {token}");
-                    this._stringBuilderLs.AppendLine($"Json.置文本 (“{path}”, {keyName})");
+                    this._stringBuilderLs.AppendLine($"Json.置逻辑 (“{path}”, {keyName})");
                     break;
                 default:
                     this._stringBuilderLs.AppendLine($".参数 {keyName}, 懵逼型, 可空, {token}");
@@ -475,6 +481,7 @@ namespace FiddlerPlugins
 
             if (format == "json")
             {
+                this._stringBuilderLs.AppendLine("Json.创建 (, , , )");
                 Console.WriteLine("处理JSON数据包");
                 JObject jsonObj = JObject.Parse(data);
                 ParseJson(jsonObj, "");
