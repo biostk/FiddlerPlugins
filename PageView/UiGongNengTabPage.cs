@@ -327,7 +327,10 @@ namespace FiddlerPlugins
         /// <param name="e"></param>
         private void uiButton2_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(uiTextBox1.Text);
+            if (this.uiTextBox1.Text != String.Empty)
+            {
+                Clipboard.SetText(uiTextBox1.Text);
+            }
             this.uiListBox1.Items.Clear();
             this._sessionList.Clear();
         }
