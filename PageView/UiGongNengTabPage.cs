@@ -308,6 +308,7 @@ namespace FiddlerPlugins
                 {
                     stringBuilder.AppendLine("'数据格式太长，我要偷懒咯");
                     stringBuilder.AppendLine($"postData=“{textData.Replace("\"", "”+ #引号 +“")}”");
+                    stringBuilder.AppendLine("http.Send (postData)");
                 }
                 else
                 {
